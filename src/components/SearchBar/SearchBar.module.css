@@ -1,3 +1,18 @@
 .SearchBar {
-	width: 400px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.SearchBar h4 {
+	text-align: left;
+	color: #004f87;
+}
+
+.SearchBar input {
+	border: 1px solid #4a71f2;
+	border-radius: 20px;
+	padding: 10px;
+	font-size: 15px;
+	color: #004f87;
+	width: 500px;
 }

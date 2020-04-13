@@ -1,4 +1,21 @@
-table {
-	height: 100px;
-	overflow-y: scroll;
+.WrapperTable {
+	margin: 0 auto;
+	width: 500px;
+}
+
+th,
+td {
+	color: #004f87;
+}
+
+.WrapperTable button {
+	border: none;
+	background-color: white;
+	color: #004f87;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.WrapperTable button:hover {
+	color: #022641;
 }

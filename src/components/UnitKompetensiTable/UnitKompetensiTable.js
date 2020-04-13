@@ -2,95 +2,39 @@ import React from "react";
 
 import classes from "./UnitKompetensiTable.module.css";
 
-class UnitKompetensiTable extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			unitKompetensi: [
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-				{
-					"kode unit": "TIK.723131",
-					"judul unit": "Membuat Unit Test Front-End",
-				},
-			],
-		};
-	}
+const UnitKompetensiTable = (props) => {
+	const sendKodeUnitHandler = (kodeUnit) => {
+		console.log("LihatDetail button clicked!", kodeUnit);
+		props.clickedUKHandler(kodeUnit);
+	};
 
-	render() {
-		const tableContent = this.state.unitKompetensi.map((unit) => {
-			return (
-				<tr>
-					<td>{unit["kode unit"]}</td>
-					<td>{unit["judul unit"]}</td>
-					<button>Lihat Detail</button>
-				</tr>
-			);
-		});
+	const tableContent = props.unitKompetensi.map((unit) => {
 		return (
-			<table>
-				<tr>
-					<th>Kode Unit</th>
-					<th>Judul Unit</th>
-				</tr>
-				<tbody className={classes.UnitKompetensiTable}>{tableContent}</tbody>
-			</table>
+			<tr key={unit["kode unit"]}>
+				<td>{unit["kode unit"]}</td>
+				<td>{unit["judul unit"]}</td>
+				<td>
+					<button onClick={() => sendKodeUnitHandler(unit["kode unit"])}>
+						Lihat Detail
+					</button>
+				</td>
+			</tr>
 		);
-	}
-}
+	});
+
+	return (
+		<div className={classes.WrapperTable}>
+			<table className={classes.FixedHeader}>
+				<thead>
+					<tr>
+						<th>Kode Unit</th>
+						<th>Judul Unit</th>
+					</tr>
+				</thead>
+				<tbody>{tableContent}</tbody>
+			</table>
+		</div>
+	);
+};
 
 export default UnitKompetensiTable;

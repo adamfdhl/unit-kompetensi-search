@@ -1,3 +1,4 @@
 .WrapperUnitKompetensi {
 	display: flex;
+	justify-content: space-around;
 }
