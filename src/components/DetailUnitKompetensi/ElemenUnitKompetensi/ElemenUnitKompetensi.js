@@ -5,11 +5,21 @@ import classes from "./ElemenUnitKompetensi.module.css";
 const ElemenUnitKompetensi = (props) => {
 	const elemenUnit = (
 		<ol>
-			<li>Mengidentifikasi tools yang digunakan</li>
-			<li>Mengidentifikasi tools yang digunakan</li>
-			<li>Mengidentifikasi tools yang digunakan</li>
-			<li>Mengidentifikasi tools yang digunakan</li>
-			<li>Mengidentifikasi tools yang digunakan</li>
+			<li>
+				Mengidentifikasi tools yang digunakan <button>Lihat Kriteria</button>
+			</li>
+			<li>
+				Mengidentifikasi tools yang digunakan <button>Lihat Kriteria</button>
+			</li>
+			<li>
+				Mengidentifikasi tools yang digunakan <button>Lihat Kriteria</button>
+			</li>
+			<li>
+				Mengidentifikasi tools yang digunakan <button>Lihat Kriteria</button>
+			</li>
+			<li>
+				Mengidentifikasi tools yang digunakan <button>Lihat Kriteria</button>
+			</li>
 		</ol>
 	);
 	return (
