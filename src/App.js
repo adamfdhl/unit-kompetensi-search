@@ -104,7 +104,6 @@ class App extends React.Component {
 					clickedUKHandler={this.getKodeUnitHandler}
 					unitKompetensi={this.state.unitKompetensi}
 				/>
-				<p>Weleh: {this.state.kodeUnitClicked}</p>
 				{detailUnitKompetensi}
 			</div>
 		);
